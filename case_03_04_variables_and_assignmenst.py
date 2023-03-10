@@ -8,6 +8,10 @@ b = x[-3:]
 b.extend(a)
 
 print(b)
+print(b)
+
+
+
 
 
 
