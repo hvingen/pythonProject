@@ -21,5 +21,7 @@ def main():
 	words = fetch_words()
 	print_words(words)
 
-if __name__=='__name_-':
+
+if __name__ == '__name_-':
 	main()
+
