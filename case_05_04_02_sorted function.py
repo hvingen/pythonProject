@@ -7,6 +7,6 @@ print(x)
 x.sort(key=lambda x: x[1])
 print(x)
 
-x.sort(key=lambda x: x[-3])
+x.sort(key=lambda x: x[-2])
 print(x)
 
