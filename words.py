@@ -1,8 +1,10 @@
+import sys
+
 from urllib.request import urlopen
 
 # Hiermee worden de woorden opgehaald en als lijst geretourneerd.
-def fetch_words():
-	with urlopen('http://sixty-north.com/c/t.txt') as story:
+def fetch_words(url):
+	with urlopen(url) as story:
 		story_words = []
 		for line in story:
 			line_words = line.decode('utf-8').split()
@@ -11,17 +13,18 @@ def fetch_words():
 	return story_words
 
 
-# Hiermee wordt een lijst woorden afgedrukt.
-def print_words(story_words):
-	for word in story_words:
-		print(word)
+# Hiermee wordt een lijst items afgedrukt.
+def print_items(items):
+	for item in items:
+		print(item)
 
 
 def main():
-	words = fetch_words()
-	print_words(words)
+	url = sys.argv[1]
+	words = fetch_words(url)
+	print_items(words)
 
 
-if __name__ == '__name_-':
+if __name__ == '__main__':
 	main()
 
