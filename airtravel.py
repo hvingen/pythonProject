@@ -25,17 +25,19 @@ class Flight:
 
 class Aircraft:
 
-        def __init__(self, registration, model, num_rows, num_seats_per_row):
-            self.registration = registration
-            self.model = model
-            self.num_rows = num_rows
-            self.num_seats_per_row = num_seats_per_row
+    def __init__(self, registration, model, num_rows, num_seats_per_row):
+        self.registration = registration
+        self.model = model
+        self.num_rows = num_rows
+        self.num_seats_per_row = num_seats_per_row
 
-        def registration(self):
-            return self._registration
+    def registration(self):
+        return self._registration
 
-        def model(self):
-            return self._model
+    def model(self):
+        return self._model
 
-
+    def seating_plan(self):
+        return (range(1, self._num_rows + 1),
+                "ABCDEFGHJK"[:self._num_seats_per_row])
 
