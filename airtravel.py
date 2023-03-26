@@ -4,7 +4,7 @@
 
 class Flight:
 
-    def __init__(self, number):
+    def __init__(self, number, aircraft):
         if not number[:2].isalpha():
             raise ValueError("NO airline code in '{}'".format(number))
 
@@ -15,11 +15,12 @@ class Flight:
             raise ValueError("Invalid route number '{}'".format(number))
 
         self._number = number
+        self._aircraft = aircraft
 
     def number(self):
         return self._number
 
-    def airlin(self):
+    def airline(self):
                return self._number[:2]
 
 
